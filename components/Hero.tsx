@@ -106,7 +106,7 @@ export function Hero() {
       </div>
 
       {/* ticker */}
-      <div className="relative mt-16 border-y border-white/10 bg-black/40 py-3.5">
+      <div className="relative mt-16 overflow-hidden border-y border-white/10 bg-black/40 py-3.5">
         <div className="ticker-track gap-10 px-5">
           {[...TICKER, ...TICKER].map((t, i) => (
             <span key={i} className="flex items-center gap-2 whitespace-nowrap text-sm">

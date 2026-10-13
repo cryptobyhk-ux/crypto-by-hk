@@ -3,7 +3,7 @@ import { Reveal } from "./Reveal";
 
 export function About() {
   return (
-    <section id="about" className="relative mx-auto max-w-6xl scroll-mt-24 px-5 py-20">
+    <section id="about" className="relative mx-auto max-w-6xl scroll-mt-24 overflow-hidden px-5 py-20">
       <div className="orb right-[-100px] top-[100px] h-[300px] w-[300px] bg-emerald-500/10" />
       <Reveal>
         <p className="text-sm font-bold uppercase tracking-[0.25em] text-emerald-400">About</p>
