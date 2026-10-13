@@ -1,5 +1,13 @@
 import { SITE } from "@/lib/site";
+import { SOCIAL_ICONS } from "./icons";
 import { Reveal } from "./Reveal";
+
+const HOVER: Record<string, string> = {
+  instagram: "group-hover:text-pink-400",
+  facebook: "group-hover:text-[#1877F2]",
+  tiktok: "group-hover:text-white",
+  discord: "group-hover:text-[#5865F2]",
+};
 
 export function Community() {
   return (
@@ -18,25 +26,28 @@ export function Community() {
           </p>
         </Reveal>
         <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {SITE.socials.map((s, i) => (
-            <Reveal key={s.label} delay={i * 100}>
-              <a
-                href={s.href}
-                target="_blank"
-                rel="noreferrer"
-                className="glass group block rounded-3xl p-7 transition duration-300 hover:-translate-y-2 hover:border-emerald-400/40 hover:shadow-2xl hover:shadow-emerald-500/10"
-              >
-                <span className="text-4xl transition duration-300 group-hover:scale-110">
-                  {s.icon}
-                </span>
-                <h3 className="mt-4 text-lg font-bold">{s.label}</h3>
-                <p className="mt-1 text-sm text-emerald-400">{s.handle}</p>
-                <p className="mt-4 text-sm font-semibold text-slate-400 transition group-hover:text-white">
-                  Follow →
-                </p>
-              </a>
-            </Reveal>
-          ))}
+          {SITE.socials.map((s, i) => {
+            const Icon = SOCIAL_ICONS[s.key];
+            return (
+              <Reveal key={s.key} delay={i * 100}>
+                <a
+                  href={s.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="glass group block rounded-3xl p-7 transition duration-300 hover:-translate-y-2 hover:border-emerald-400/40 hover:shadow-2xl hover:shadow-emerald-500/10"
+                >
+                  <span className={`text-slate-300 transition duration-300 ${HOVER[s.key]}`}>
+                    <Icon className="h-10 w-10 transition duration-300 group-hover:scale-110" />
+                  </span>
+                  <h3 className="mt-4 text-lg font-bold">{s.label}</h3>
+                  <p className="mt-1 text-sm text-emerald-400">{s.handle}</p>
+                  <p className="mt-4 text-sm font-semibold text-slate-400 transition group-hover:text-white">
+                    Follow →
+                  </p>
+                </a>
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>

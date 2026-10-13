@@ -21,7 +21,7 @@ export function Hero() {
             </span>
           </Reveal>
           <Reveal delay={100}>
-            <h1 className="mt-6 text-5xl font-black leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
+            <h1 className="mt-6 text-[2.65rem] font-black leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
               Master the
               <br />
               <span className="grad-text text-glow">Crypto Markets.</span>
@@ -93,11 +93,11 @@ export function Hero() {
                 </div>
               </div>
             </div>
-            <div className="glass absolute -left-6 top-8 rounded-2xl px-4 py-3 text-sm">
+            <div className="glass absolute -left-3 top-8 rounded-2xl px-4 py-3 text-sm sm:-left-6">
               <p className="font-bold text-emerald-400">+5 yrs</p>
               <p className="text-xs text-slate-400">market experience</p>
             </div>
-            <div className="glass absolute -right-6 bottom-8 rounded-2xl px-4 py-3 text-sm">
+            <div className="glass absolute -right-3 bottom-8 rounded-2xl px-4 py-3 text-sm sm:-right-6">
               <p className="font-bold text-amber-400">Risk-first</p>
               <p className="text-xs text-slate-400">trading system</p>
             </div>

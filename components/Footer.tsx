@@ -1,4 +1,5 @@
 import { SITE } from "@/lib/site";
+import { SocialRow } from "./Navbar";
 
 export function Footer() {
   return (
@@ -12,6 +13,7 @@ export function Footer() {
             Crypto <span className="text-emerald-400">by HK</span>
           </span>
         </a>
+        <SocialRow />
         <div className="flex flex-wrap justify-center gap-x-7 gap-y-2 text-sm text-slate-400">
           <a href="#about" className="hover:text-emerald-400">About</a>
           <a href="#journey" className="hover:text-emerald-400">Journey</a>

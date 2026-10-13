@@ -9,10 +9,10 @@ export const SITE = {
   calendly: "https://calendly.com/cryptobyhk/30min",
   email: "hello@cryptobyhk.com",
   socials: [
-    { label: "Instagram", href: "https://instagram.com/cryptobyhk", icon: "📸", handle: "@cryptobyhk" },
-    { label: "Facebook", href: "https://facebook.com/cryptobyhk", icon: "📘", handle: "Crypto by HK" },
-    { label: "TikTok", href: "https://tiktok.com/@cryptobyhk", icon: "🎵", handle: "@cryptobyhk" },
-    { label: "Discord", href: "https://discord.gg/cryptobyhk", icon: "💬", handle: "Join the server" },
+    { key: "instagram", label: "Instagram", href: "https://instagram.com/cryptobyhk", handle: "@cryptobyhk" },
+    { key: "facebook", label: "Facebook", href: "https://facebook.com/cryptobyhk", handle: "Crypto by HK" },
+    { key: "tiktok", label: "TikTok", href: "https://tiktok.com/@cryptobyhk", handle: "@cryptobyhk" },
+    { key: "discord", label: "Discord", href: "https://discord.gg/cryptobyhk", handle: "Join the server" },
   ],
 };
 
