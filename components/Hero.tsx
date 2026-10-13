@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { SITE, TICKER } from "@/lib/site";
 import { Reveal } from "./Reveal";
 
@@ -73,20 +74,23 @@ export function Hero() {
           </Reveal>
         </div>
 
-        {/* photo placeholder */}
+        {/* photo */}
         <Reveal delay={200} className="flex justify-center">
           <div className="animate-floaty relative">
             <div className="animate-spin-slow absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-emerald-500/30 via-transparent to-amber-500/30 blur-xl" />
-            <div className="glass relative flex h-72 w-72 items-center justify-center rounded-[2rem] sm:h-96 sm:w-96">
-              <div className="text-center">
-                <div className="mx-auto flex h-32 w-32 items-center justify-center rounded-full bg-gradient-to-br from-emerald-400 to-teal-600 text-5xl font-black text-[#04060b] shadow-2xl shadow-emerald-500/30">
-                  HK
+            <div className="relative rounded-[2rem] bg-gradient-to-br from-emerald-400/60 via-white/10 to-amber-400/60 p-[3px] shadow-2xl shadow-emerald-500/20">
+              <div className="relative h-80 w-72 overflow-hidden rounded-[calc(2rem-3px)] sm:h-[26rem] sm:w-[22rem]">
+                <Image
+                  src="/hassan.png"
+                  alt="Hassan Khan — Crypto by HK"
+                  fill
+                  className="object-cover object-top"
+                  priority
+                />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent p-5 pt-16">
+                  <p className="text-xl font-black text-white">{SITE.name}</p>
+                  <p className="text-sm font-semibold text-emerald-400">{SITE.role}</p>
                 </div>
-                <p className="mt-5 text-xl font-bold">{SITE.name}</p>
-                <p className="text-sm text-emerald-400">{SITE.role}</p>
-                <p className="mx-auto mt-3 max-w-[220px] text-xs leading-relaxed text-slate-500">
-                  Photo coming soon — Hassan&apos;s picture will appear here.
-                </p>
               </div>
             </div>
             <div className="glass absolute -left-6 top-8 rounded-2xl px-4 py-3 text-sm">
