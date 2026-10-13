@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Providers } from "./providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,24 +13,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PeopleDesk — HR Management System",
+  title: "Hassan Khan — Crypto Trader & Mentor | Crypto by HK",
   description:
-    "Complete HR management software: employee records, attendance, leave management and payroll — all in one dashboard.",
+    "Hassan Khan (Crypto by HK): crypto trader and mentor. 1-on-1 mentorship calls, trade signals and portfolio reviews. Book your call today.",
 };
-
-// Fully client-side demo app (localStorage state + live clock) — render on
-// demand instead of prerendering at build time.
-export const dynamic = "force-dynamic";
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full bg-slate-100 text-slate-900">
-        <Providers>{children}</Providers>
-      </body>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} scroll-smooth`}>
+      <body className="bg-[#04060b] text-slate-100 antialiased">{children}</body>
     </html>
   );
 }
